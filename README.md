@@ -68,4 +68,8 @@ These Engineering Leadership Workshops cover a wide variety of topics, including
 12. Building Rapport
     - Everyone has a story
     - Now you've built rapport, what then?
-13. Burn Rate
+13. Team Management
+    - Burn Rate
+    - Bus Factor
+    - Churn
+
