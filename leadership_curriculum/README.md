@@ -65,4 +65,7 @@
     - Burn Rate
     - Bus Factor
     - Churn
+14. Tracking Contributions and Authorship
+    - Day-to-day
+    - Papers
 
