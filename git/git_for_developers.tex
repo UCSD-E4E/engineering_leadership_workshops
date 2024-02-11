@@ -17,15 +17,10 @@
     \begin{itemize}
         \item \textbf{Git vs. GitHub:} Distributed VCS vs. collaboration platform.
         \item \textbf{Purpose:} Enhances project management and teamwork.
-        \item \textbf{Basic Commands Overview:}
-        \begin{itemize}
-            \item \textit{git init/clone}: Start or copy repositories.
-            \item \textit{git add/commit}: Stage and save changes.
-            \item \textit{git push/pull}: Update remote and local repos.
-            \item \textit{git branch/checkout}: Manage and switch branches.
-            \item \textit{git merge}: Combine branch changes.
-        \end{itemize}
     \end{itemize}
+    \begin{center}
+        \includegraphics[scale=.25]{git_commands.png}
+    \end{center}
 \end{frame}
 \begin{frame}{Git Workflows}
     \begin{itemize}
@@ -72,7 +67,7 @@
         \item Marks significant project milestones.
         \item Useful for release points, use semantic versioning.
         \item Lightweight tags: \textit{git tag tagname}.
-        \item Annotated tags: \textit{git tag -a tagname}.
+        \item Annotated tags: \textit{git tag -a tagname ``message''}.
         \item List/delete tags: \textit{git tag}, \textit{git tag -d tagname}.
     \end{itemize}
 \end{frame}    
@@ -119,13 +114,20 @@
         \includegraphics[scale=.5]{github_security.jpg}
     \end{center}
 \end{frame}
-\begin{frame}{Extras}
+\begin{frame}{Extras: Advanced Git}
     \begin{itemize}
-        \item Interactive Rebase: Rewrite history, edit commits.
-        \item Use Case: Clean feature branch before merging.
+        \item Interactive Rebase*: Rewrite history, edit commits.
+        \item Stashing*: Temporarily shelf changes for tasks.
         \item Cherry-picking: Apply commit to another branch.
-        \item Use Case: Apply bug fixes across branches.
-        \item Stashing: Temporarily shelf changes for tasks.
+        \item * Not recommended for shared/remote repositories.
     \end{itemize}
-    \end{frame}
+\end{frame}
+\begin{frame}{Cherry-picking}
+    \begin{itemize}
+        \item \textit{git cherry-pick commit-hash}
+    \end{itemize}
+    \begin{center}
+        \includegraphics[scale=.25]{cherry_diagram.png}
+    \end{center}
+\end{frame}
 \end{document}
