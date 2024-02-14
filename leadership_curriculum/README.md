@@ -1,10 +1,3 @@
-# Engineering Leadership Workshops
-These Engineering Leadership Workshops cover a wide variety of topics, including:
-- Project Management
-- Developer Operations (DevOps)
-- Risk Assessment/Risk Management
-- Leadership/Group Management and Development
-
 # Leadership Curriculum
 1. What is a Team?
     - Key traits of teams
@@ -72,4 +65,7 @@ These Engineering Leadership Workshops cover a wide variety of topics, including
     - Burn Rate
     - Bus Factor
     - Churn
+14. Tracking Contributions and Authorship
+    - Day-to-day
+    - Papers
 
