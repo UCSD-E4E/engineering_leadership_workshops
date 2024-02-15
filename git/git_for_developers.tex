@@ -103,16 +103,20 @@
         \item Example: https://github.com/TylerFlar/MinecraftDiscord-CrossChat
     \end{itemize}
 \end{frame}
-\begin{frame}{Securing Your Project}
-    \begin{itemize}
-        \item Set branch protection rules for safety.
-        \item Dependabot scans and fixes vulnerabilities.
-        \item Secret scanning detects exposed credentials.
-        \item Code scanning for vulnerabilities on push.
-    \end{itemize}
-    \begin{center}
-        \includegraphics[scale=.5]{github_security.jpg}
-    \end{center}
+\begin{frame}{Code Security}
+    \begin{columns}
+        \begin{column}{0.4\textwidth}
+            Protection against:
+            \begin{itemize}
+                \item Vulnerable dependencies
+                \item Some code vulnerabilities
+                \item Some committed secrets
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{github_security.jpg}
+        \end{column}
+    \end{columns}
 \end{frame}
 \begin{frame}{Extras: Advanced Git}
     \begin{itemize}
