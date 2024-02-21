@@ -22,6 +22,22 @@
         \includegraphics[scale=.25]{git_commands.png}
     \end{center}
 \end{frame}
+\begin{frame}{Extra Commands}
+    \begin{itemize}
+        \item Interactive Rebase*: Rewrite history, edit commits.
+        \item Stashing: Temporarily shelf changes for tasks.
+        \item Cherry-picking: Apply commit to another branch.
+        \item * Use with caution as this action is DESTRUCTIVE.
+    \end{itemize}
+\end{frame}
+\begin{frame}{Cherry-picking}
+    \begin{itemize}
+        \item \textit{git cherry-pick commit-hash}
+    \end{itemize}
+    \begin{center}
+        \includegraphics[scale=.25]{cherry_diagram.png}
+    \end{center}
+\end{frame}
 \begin{frame}{Git Workflows}
     \begin{itemize}
         \item Feature Branch Workflow
@@ -76,6 +92,7 @@
         \item Keep PRs small for easy review.
         \item Use checklists for consistent reviews.
         \item Automate tests and checks via GitHub Actions.
+        \item Example: https://github.com/stevemao/github-issue-templates/blob/master/checklist2/PULL\_REQUEST\_TEMPLATE.md
     \end{itemize}
 \end{frame}
 \begin{frame}{Releases}
@@ -135,20 +152,11 @@
 \begin{frame}{Branch Protection Example}
     \url{https://github.com/UCSD-E4E/branch_protections_demo}
 \end{frame}
-\begin{frame}{Extras: Advanced Git}
+\begin{frame}{More Useful GitHub Features}
     \begin{itemize}
-        \item Interactive Rebase*: Rewrite history, edit commits.
-        \item Stashing*: Temporarily shelf changes for tasks.
-        \item Cherry-picking: Apply commit to another branch.
-        \item * Not recommended for shared/remote repositories.
+        \item Projects/Project Templates
+        \item Wikis
+        \item Issues/Issue Templates
     \end{itemize}
-\end{frame}
-\begin{frame}{Cherry-picking}
-    \begin{itemize}
-        \item \textit{git cherry-pick commit-hash}
-    \end{itemize}
-    \begin{center}
-        \includegraphics[scale=.25]{cherry_diagram.png}
-    \end{center}
 \end{frame}
 \end{document}
