@@ -1,0 +1,172 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\usetheme{metropolis}
+\title{git/GitHub for Leaders}
+\institute{Engineers for Exploration, UC San Diego}
+\setbeamertemplate{caption}[numbered]
+\lstset{
+    basicstyle=\ttfamily
+}
+\logo{\includegraphics[height=.65cm,keepaspectratio]{e4e_logo_350x136.png}}
+\begin{document}
+\maketitle
+\begin{frame}{Introduction}
+    \begin{itemize}
+        \item \textbf{Git vs. GitHub:} Distributed VCS vs. collaboration platform.
+        \item \textbf{Purpose:} Enhances project management and teamwork.
+    \end{itemize}
+    \begin{center}
+        \includegraphics[scale=.25]{git_commands.png}
+    \end{center}
+\end{frame}
+\begin{frame}{Extra Commands}
+    \begin{itemize}
+        \item Interactive Rebase*: Rewrite history, edit commits.
+        \item Stashing: Temporarily shelf changes for tasks.
+        \item Cherry-picking: Apply commit to another branch.
+        \item * Use with caution as this action is DESTRUCTIVE.
+    \end{itemize}
+\end{frame}
+\begin{frame}{Cherry-picking}
+    \begin{itemize}
+        \item \textit{git cherry-pick commit-hash}
+    \end{itemize}
+    \begin{center}
+        \includegraphics[scale=.25]{cherry_diagram.png}
+    \end{center}
+\end{frame}
+\begin{frame}{Git Workflows}
+    \begin{itemize}
+        \item Feature Branch Workflow
+        \item Gitflow Workflow
+        \item Fork Workflow
+    \end{itemize}
+\end{frame}
+\begin{frame}{Feature Branch Workflow}
+    \begin{itemize}
+        \item Develop each feature in its own branch.
+        \item Merges via pull requests for code review.
+        \item Keeps main branch stable, encourages collaboration.
+        \item Ideal for projects with simultaneous feature development.
+    \end{itemize}
+    \begin{center}
+        \includegraphics[scale=.25]{feature_workflow_diagram.png}
+    \end{center}
+\end{frame}
+\begin{frame}{Gitflow Workflow}
+    \begin{itemize}
+        \item Structured model: development, features, releases, hotfixes.
+        \item Systematic release management, clear branch roles.
+        \item Tracks progress efficiently, supports parallel releases.
+        \item Suited for scheduled release cycles.
+    \end{itemize}
+    \begin{center}
+        \includegraphics[scale=.2]{gitflow_workflow_diagram.png}
+    \end{center}
+\end{frame}
+\begin{frame}{Fork Workflow}
+    \begin{itemize}
+        \item Developers work on personal repository copies.
+        \item Changes proposed via pull requests.
+        \item Encourages external contributions, safe experimentation.
+        \item Ideal for open-source and large collaborations.
+    \end{itemize}
+    \begin{center}
+        \includegraphics[scale=.25]{fork_workflow_diagram.png}
+    \end{center}
+\end{frame}
+\begin{frame}{Tags}
+    \begin{itemize}
+        \item Marks significant project milestones.
+        \item Useful for release points, use semantic versioning.
+        \item Lightweight tags: \textit{git tag tagname}.
+        \item Annotated tags: \textit{git tag -a tagname ``message''}.
+        \item List/delete tags: \textit{git tag}, \textit{git tag -d tagname}.
+    \end{itemize}
+\end{frame} 
+\begin{frame}{Issue Management}
+    \begin{itemize}
+        \item Templates for each type of issue.
+        \begin{itemize}
+            \item Describes issue type, steps to reproduce, etc.
+            \item Type of issue (bug, feature, etc.).
+            \item Assignees, labels.
+            \item Reproducibility, severity, and priority.
+        \end{itemize}
+    \end{itemize}
+\end{frame}   
+\begin{frame}{Pull Requests (PR) Management}
+    \begin{itemize}
+        \item Keep PRs small for easy review.
+        \item Use checklists for consistent reviews.
+        \item Automate tests and checks via GitHub Actions.
+        \item Example: https://github.com/stevemao/github-issue-templates/blob/master/checklist2/PULL\_REQUEST\_TEMPLATE.md
+    \end{itemize}
+\end{frame}
+\begin{frame}{Releases}
+    \begin{itemize}
+        \item Draft new release, choose git tag.
+        \item Add release notes describing changes.
+        \item Bundles code, executables, and assets.
+        \item Detailed notes inform users of updates.
+        \item Example: https://github.com/HumanSignal/label-studio/releases
+    \end{itemize}
+\end{frame}
+\begin{frame}{GitHub Actions for Automation}
+    \begin{itemize}
+        \item Triggered by GitHub events (push, PRs).
+        \item Workflows combine actions in YAML files.
+        \item Runs on GitHub-hosted or self-hosted runners.
+        \item Automates tests and deployment on PR merge.
+        \item Auto-assigns issues, auto-labels PRs by path.
+    \end{itemize}
+\end{frame}
+\begin{frame}{Putting it Together}
+    \begin{itemize}
+        \item Combine Tags, Releases, and GitHub Actions.
+        \item Interact with source code.
+        \item Example: https://github.com/TylerFlar/MinecraftDiscord-CrossChat
+    \end{itemize}
+\end{frame}
+\begin{frame}{Code Security}
+    \begin{columns}
+        \begin{column}{0.4\textwidth}
+            Protection against:
+            \begin{itemize}
+                \item Vulnerable dependencies
+                \item Some code vulnerabilities
+                \item Some committed secrets
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{github_security.jpg}
+        \end{column}
+    \end{columns}
+\end{frame}
+\begin{frame}{Branch Protection}
+    Why do we need branch protections?
+\end{frame}
+\begin{frame}{Configuring Branch Protection}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{branch_protection_1.png}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{branch_protection_2.png}
+        \end{column}
+    \end{columns}
+    \centering
+\end{frame}
+\begin{frame}{Branch Protection Example}
+    \url{https://github.com/UCSD-E4E/branch_protections_demo}
+\end{frame}
+\begin{frame}{More Useful GitHub Features}
+    \begin{itemize}
+        \item Projects/Project Templates
+        \item Wikis
+    \end{itemize}
+\end{frame}
+\end{document}
