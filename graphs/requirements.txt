@@ -1,0 +1,8 @@
+jupyter
+matplotlib
+numpy
+pandas
+cycler
+matplotlib-label-lines
+seaborn
+xlrd
