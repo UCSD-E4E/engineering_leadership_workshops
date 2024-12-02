@@ -16,9 +16,10 @@ services:
     #   - GF_SECURITY_ADMIN_USER=e4e-admin
     #   - GF_SECURITY_ADMIN_PASSWORD
     volumes:
-      - ./grafana/config:/etc/grafana:ro
+      - ./grafana:/etc/grafana:ro
     ports:
       - 9091:3000
+    env_file: .secrets/grafana.env
   
   blackbox_exporter:
     image: quay.io/prometheus/blackbox-exporter:v0.25.0
