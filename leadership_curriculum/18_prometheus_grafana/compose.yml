@@ -1,0 +1,45 @@
+services:
+  prometheus:
+    image: prom/prometheus:v3.0.1
+    container_name: prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    volumes:
+      - ./prometheus:/etc/prometheus:ro
+    ports:
+      - 9090:9090
+  
+  grafana:
+    image: grafana/grafana-enterprise:11.3.1
+    container_name: grafana
+    # environment:
+    #   - GF_SECURITY_ADMIN_USER=e4e-admin
+    #   - GF_SECURITY_ADMIN_PASSWORD
+    volumes:
+      - ./grafana/config:/etc/grafana:ro
+    ports:
+      - 9091:3000
+  
+  blackbox_exporter:
+    image: quay.io/prometheus/blackbox-exporter:v0.25.0
+    container_name: blackbox_exporter
+    volumes:
+      - ./blackbox-exporter:/config:ro
+    command: --config.file=/config/blackbox.yml
+  
+  alertmanager:
+    image: quay.io/prometheus/alertmanager:v0.27.0
+    container_name: alertmanager
+    volumes:
+      - ./alertmanager:/etc/alertmanager:ro
+    command: --config.file=/etc/alertmanager/alertmanager.yml
+    ports:
+      - 9093:9093
+
+  # service_under_test:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   container_name: service_under_test
+  #   ports:
+  #     - 9092:9092
