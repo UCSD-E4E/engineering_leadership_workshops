@@ -37,10 +37,10 @@ services:
     ports:
       - 9093:9093
 
-  # service_under_test:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-  #   container_name: service_under_test
-  #   ports:
-  #     - 9092:9092
+  service_under_test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: service_under_test
+    ports:
+      - 9092:9092
